@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>M-M-MAX HEADROOM — Personal Assistant</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="crt">
+  <div class="scanlines"></div>
+  <div class="flicker"></div>
+
+  <header>
+    <h1 class="masthead">MAX HEADROOM</h1>
+    <div class="uhs">PERSONAL ASSISTANT &bull; CH-4 &bull; LIVE BROADCAST</div>
+  </header>
+
+  <main>
+    <section class="stage">
+      <div class="avatar-frame glitch" data-text="MAX">
+        <img id="avatar" src="/max.png" alt="Max Headroom" />
+      </div>
+      <div class="lower-third">
+        <span id="status" class="status">ON AIR &bull; ready</span>
+      </div>
+    </section>
+
+    <section class="console">
+      <div id="transcript" class="transcript" aria-live="polite"></div>
+
+      <div class="controls">
+        <button id="mic" title="Hold to talk">
+          <span class="mic-icon">&#127908;</span> Hold to talk
+        </button>
+        <form id="text-form">
+          <input id="text-input" type="text" autocomplete="off"
+                 placeholder="Wha-what's on your mind?" />
+          <button type="submit">Send</button>
+        </form>
+        <button id="mute" title="Toggle Max's voice">&#128266;</button>
+      </div>
+    </section>
+  </main>
+
+  <aside class="notes-panel">
+    <h2>NOTES / MEMORY</h2>
+    <ul id="notes-list"></ul>
+    <div class="controls">
+      <form id="note-form">
+        <input id="note-input" type="text" placeholder="New note..." autocomplete="off" />
+        <button type="submit">Save</button>
+      </form>
+    </div>
+    <p class="hint">Or just tell Max: "r-remember I have a dentist appointment Tuesday"</p>
+  </aside>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
